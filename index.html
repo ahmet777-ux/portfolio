@@ -1,216 +1,86 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio & Bewerbung – Nika Nadiradze</title>
+  <meta charset="UTF-8">
+  <title>Portfolio – Nika Nadiradze</title>
   <style>
-    /* Grundlayout */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f7f8;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      min-height: 100vh;
-      align-items: flex-start;
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #111;
+      color: #f4f4f4;
     }
-
-    .container {
-      background: #fff;
-      width: 90%;
-      max-width: 900px;
-      margin: 40px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      overflow: hidden;
+    h1, h2, h3 {
+      text-transform: uppercase;
+      color: #e63946;
+      letter-spacing: 2px;
     }
-
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px 30px;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+    h1 {
+      font-size: 40px;
+      border-bottom: 4px solid #e63946;
+      padding-bottom: 10px;
     }
-
-    /* Tabs */
-    nav {
-      display: flex;
-      background-color: #34495e;
+    .section {
+      margin-top: 30px;
+      padding: 20px;
+      border-left: 5px solid #e63946;
+      background: #1a1a1a;
+      border-radius: 12px;
     }
-
-    nav button {
-      flex: 1;
-      background: none;
-      border: none;
-      color: #bdc3c7;
-      padding: 15px 0;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s, color 0.3s;
-      font-weight: 600;
-    }
-
-    nav button:hover,
-    nav button.active {
-      background-color: #1abc9c;
-      color: white;
-    }
-
-    /* Inhalt der Tabs */
-    section.tab-content {
-      display: none;
-      padding: 30px 40px;
-      line-height: 1.6;
-    }
-
-    section.tab-content.active {
-      display: block;
-    }
-
-    h2 {
-      color: #1abc9c;
+    .info {
+      font-size: 18px;
       margin-bottom: 15px;
-      border-bottom: 2px solid #1abc9c;
-      padding-bottom: 5px;
-      font-weight: 700;
     }
-
-    ul {
+    .skills ul, .experience ul {
       list-style: none;
       padding-left: 0;
     }
-
-    ul li {
-      background: url('data:image/svg+xml;utf8,<svg fill="%231abc9c" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M20.285 2.863L9 14.147 3.715 8.864 2.3 10.28l6.7 6.7L21.7 4.864z"/></svg>') no-repeat left center;
-      background-size: 14px 14px;
-      padding-left: 24px;
-      margin-bottom: 10px;
-      font-weight: 500;
+    .skills li::before, .experience li::before {
+      content: "🥋 ";
     }
-
-    /* Kontaktinfo */
-    .contact-info p {
-      margin: 5px 0;
-      font-weight: 600;
-    }
-
-    /* Bewerbungssprache (optional) */
-    .bewerbung-text {
+    .quote {
       font-style: italic;
-      background: #ecf0f1;
-      padding: 15px 20px;
-      border-left: 5px solid #1abc9c;
-      margin-top: 15px;
-      border-radius: 5px;
-      color: #555;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav button {
-        font-size: 1rem;
-        padding: 12px 0;
-      }
-      section.tab-content {
-        padding: 20px 20px;
-      }
+      font-size: 20px;
+      text-align: center;
+      margin-top: 40px;
+      color: #ffd166;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>Portfolio & Bewerbung – Nika Nadiradze</header>
+  <h1>Portfolio – Nika Nadiradze</h1>
 
-    <nav>
-      <button class="tab-button active" data-tab="ueber-mich">Über mich</button>
-      <button class="tab-button" data-tab="faehigkeiten">Fähigkeiten</button>
-      <button class="tab-button" data-tab="erfahrungen">Erfahrungen</button>
-      <button class="tab-button" data-tab="schulbildung">Schulbildung</button>
-      <button class="tab-button" data-tab="interessen">Interessen</button>
-      <button class="tab-button" data-tab="kontakt">Kontakt</button>
-    </nav>
-
-    <section id="ueber-mich" class="tab-content active">
-      <h2>Über mich</h2>
-      <p>
-        Ich bin ein motivierter und engagierter 17-jähriger, der eine Ausbildung zum Installateur beginnen möchte. Technische Arbeit und handwerkliche Tätigkeiten machen mir großen Spaß. Ich lerne schnell, arbeite sorgfältig und fühle mich im Team wohl. Mein Ziel ist es, mich ständig weiterzuentwickeln und ein erfahrener Installateur zu werden.
-      </p>
-      <div class="bewerbung-text">
-        Sehr geehrte Damen und Herren,<br /><br />
-        mit großem Interesse bewerbe ich mich um einen Ausbildungsplatz als Installateur. Ich bin hoch motiviert, meine Fähigkeiten einzusetzen und durch eine fundierte Ausbildung zu einem kompetenten Facharbeiter zu wachsen.<br /><br />
-        Über die Gelegenheit zu einem persönlichen Gespräch freue ich mich sehr.<br /><br />
-        Mit freundlichen Grüßen,<br />
-        Nika Nadiradze
-      </div>
-    </section>
-
-    <section id="faehigkeiten" class="tab-content">
-      <h2>Fähigkeiten</h2>
-      <ul>
-        <li>Grundkenntnisse in handwerklichen Tätigkeiten</li>
-        <li>Technisches Verständnis</li>
-        <li>Teamfähigkeit und Zuverlässigkeit</li>
-        <li>Verantwortungsbewusstsein</li>
-        <li>Motivation und Lernbereitschaft</li>
-      </ul>
-    </section>
-
-    <section id="erfahrungen" class="tab-content">
-      <h2>Praktische Erfahrungen</h2>
-      <p><strong>Praktikum bei [Firma/Ort]</strong><br />Datum: [Monat Jahr]</p>
-      <ul>
-        <li>Unterstützung bei Installationsarbeiten</li>
-        <li>Werkzeuge und Materialien vorbereitet</li>
-        <li>Erste Einblicke in den Arbeitsalltag als Installateur gewonnen</li>
-      </ul>
-    </section>
-
-    <section id="schulbildung" class="tab-content">
-      <h2>Schulbildung</h2>
-      <p><strong>Schule:</strong> [Name deiner Schule]</p>
-      <p><strong>Schulabschluss:</strong> Voraussichtlich [Monat Jahr]</p>
-      <p><strong>Schwerpunkt:</strong> [z. B. Technik, Mathematik, Physik]</p>
-    </section>
-
-    <section id="interessen" class="tab-content">
-      <h2>Interessen</h2>
-      <ul>
-        <li>Handwerkliche Tätigkeiten</li>
-        <li>Technik und Elektronik</li>
-        <li>Teamarbeit und Projekte</li>
-      </ul>
-    </section>
-
-    <section id="kontakt" class="tab-content">
-      <h2>Kontakt</h2>
-      <p><strong>Name:</strong> Nika Nadiradze</p>
-      <p><strong>Adresse:</strong> Illekgasse 10/12, 1150 Wien</p>
-      <p><strong>Telefon:</strong> +43 664 4038448</p>
-      <p><strong>E-Mail:</strong> nadiradze08@gmail.com</p>
-    </section>
+  <div class="info">
+    <p>🏠 Adresse: Illekgasse 10/12, 1150 Wien</p>
+    <p>📞 Telefon: +43 664 4038448</p>
+    <p>✉️ E-Mail: nadiradze08@gmail.com</p>
   </div>
 
-  <script>
-    const buttons = document.querySelectorAll('nav button');
-    const tabs = document.querySelectorAll('section.tab-content');
+  <div class="section">
+    <h2>Disziplin & Fokus</h2>
+    <p>Wie im Kampfsport gilt für mich auch im Beruf: Durchhaltevermögen, Zielstrebigkeit und Respekt führen zum Erfolg.</p>
+  </div>
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Aktiven Button und Tab entfernen
-        buttons.forEach(btn => btn.classList.remove('active'));
-        tabs.forEach(tab => tab.classList.remove('active'));
+  <div class="section skills">
+    <h2>Stärken</h2>
+    <ul>
+      <li>Teamgeist und Kommunikation</li>
+      <li>Technisches Verständnis</li>
+      <li>Zuverlässigkeit & Pünktlichkeit</li>
+      <li>Schnelle Auffassungsgabe</li>
+      <li>Hohe Motivation</li>
+    </ul>
+  </div>
 
-        // Aktiven Button und Tab setzen
-        button.classList.add('active');
-        document.getElementById(button.dataset.tab).classList.add('active');
-      });
-    });
-  </script>
+  <div class="section experience">
+    <h2>Erfahrungen</h2>
+    <ul>
+      <li>Berufspraxis bei OK Installation</li>
+      <li>Unterstützung bei Autowartung und Pflege</li>
+      <li>Kampfsporterfahrung: Ausdauer, Disziplin, Durchsetzungsvermögen</li>
+    </ul>
+  </div>
+
+  <div class="quote">„Im Ring wie im Leben – nur wer kämpft, kann gewinnen.“</div>
 </body>
 </html>
